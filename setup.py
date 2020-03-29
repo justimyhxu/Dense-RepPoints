@@ -2,9 +2,9 @@
 import os
 import subprocess
 import time
-from setuptools import find_packages, setup
 
 import torch
+from setuptools import find_packages, setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 
@@ -294,7 +294,11 @@ if __name__ == '__main__':
                 sources=[
                     'src/carafe_naive_cuda.cpp',
                     'src/carafe_naive_cuda_kernel.cu'
-                ])
+                ]),
+            make_cuda_ext(
+                name='chamfer_2d',
+                module='mmdet.ops.chamfer_2d',
+                sources=['src/chamfer_cuda.cpp', 'src/chamfer_2d.cu']),
         ],
         cmdclass={'build_ext': BuildExtension},
         zip_safe=False)
