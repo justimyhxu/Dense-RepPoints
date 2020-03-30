@@ -6,7 +6,7 @@ This repo is a official implementation of ["Dense RepPoints: Representing Visual
 
 
 ## Introduction
-**Dense RepPoints** utilizes a dense point set to describe the multi-grained object representation of both box level and pixel level. The following figure shows the learned dense RepPoints, which well represent object segments in different forms. The key technique to learn such representation is a **distance transform sampling (DTS)** method combined with a **set-to-set supervision**. The method is also efficient, achieving near constant complexity with increasing point number. Please touch [arXiv](https://arxiv.org/abs/1912.11473) for more details. 
+**Dense RepPoints** utilizes a dense point set to describe the multi-grained object representation of both box level and pixel level. The following figure illustrates the representation of object segments in different forms using Dense RepPoints. The key techniques to learn such representation are a **distance transform sampling (DTS)** method combined with a **set-to-set supervision** method. In inference, both the **concave hull** and **triangulation** methods are supported. The method is also efficient, achieving near constant complexity with increasing point number. Please touch [arXiv](https://arxiv.org/abs/1912.11473) for more details. 
 <div align="center">
   <img src="demo/dense_reppoints.png" width="300px" />   <img src="demo/inference_mask.png" width="300px" />
   <p>Learning Dense RepPoints in Object Detection and Instance Segmentation.</p>
@@ -18,7 +18,7 @@ a. Clone the repo, install and download the COCO detection dataset.
 ```
 git clone --recursive https://github.com/justimyhxu/Dense-RepPoints.git
 ```
-Please refer to [INSTALL.md](./docs/INSTALL.md) for installation and dataset preparation in details.
+Please refer to [INSTALL.md](./docs/INSTALL.md) for installation and dataset preparation in detail.
 
 b. Train with a specific configuration file:
 ```
@@ -33,7 +33,7 @@ c. Test script:
 ```
 ./tools/dist_test.sh  ${path-to-cfg-file}  ${model_path} ${num_gpu} --out ${out_file}
 ```
-Please see [GETTING_STARTED.md](./docs/GETTING_STARTED.md) for the basic usage in details
+Please see [GETTING_STARTED.md](./docs/GETTING_STARTED.md) for the basic usage in detail.
 
 ## Citing Dense RepPoints
 
