@@ -7,10 +7,13 @@ This repo is a official implementation of ["Dense RepPoints: Representing Visual
 
 ## Introduction
 **Dense RepPoints** utilizes a dense point set to describe the multi-grained object representation of both box level and pixel level. The following figure illustrates the representation of object segments in different forms using Dense RepPoints. The key techniques to learn such representation are a **distance transform sampling (DTS)** method combined with a **set-to-set supervision** method. In inference, both the **concave hull** and **triangulation** methods are supported. The method is also efficient, achieving near constant complexity with increasing point number. Please touch [arXiv](https://arxiv.org/abs/1912.11473) for more details. 
+
 <div align="center">
-  <img src="demo/dense_reppoints.png" width="300px" />   <img src="demo/inference_mask.png" width="300px" />
+  <img src="demo/dense_reppoints.png" width="250px" />  <img src="demo/inference_mask.png" width="250px" /> <img src="demo/pts_seg.png" width="295px" />  
   <p>Learning Dense RepPoints in Object Detection and Instance Segmentation.</p>
 </div>
+
+
 
 ## Usage
 
@@ -55,7 +58,7 @@ The results on COCO 2017val are shown in the table below. **More code and models
 | :----:          | :------: | :-------: | :------:      | :-----:| :-----: | :----:  | :------: | :------:  |
 | Dense RepPoints | R-50-FPN | none      | MinMax        | MaxIou           |1x       | 38.9     | 32.7     | [model](https://drive.google.com/file/d/1gAgGTqsrufRleYflrClxI0AUuUC_x1MN/view?usp=sharing) |
 | Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS             |1x       | 39.5     | 32.9     | [model](https://drive.google.com/file/d/1jhojzH0N9KI2SpLa-xNQZHZUCU9O5SAE/view?usp=sharing) |
-| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS            |3x (ms)       | 43.0     | 36.2     | [model](https://drive.google.com/file/d/1ZPd1iCZGEzqhVs4PwCXdThzqp0ufa_KX/view?usp=sharing) |
+| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS            |3x (ms-train)       | 43.0     | 36.2     | [model](https://drive.google.com/file/d/1ZPd1iCZGEzqhVs4PwCXdThzqp0ufa_KX/view?usp=sharing) |
 
 
 **Notes:**
