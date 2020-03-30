@@ -2,7 +2,7 @@
 
 The major contributors include [Yinghao Xu*](https://github.com/justimyhxu), [Ze Yang*](https://yangze.tech/), [Han Xue*](https://github.com/xiaoxiaoxh), [Zheng Zhang](https://www.microsoft.com/en-us/research/people/zhez/) ,[Han Hu](https://ancientmooner.github.io/). (* indicates equal contribution)
 
-This repo is a official implementation of ["Dense RepPoints: Representing Visual Objects with Dense Point Sets"](https://arxiv.org/abs/1912.11473) on COCO object detection/instance segmentation based on open-mmlab's mmdetection. The code is based on [mmdetection](https://github.com/open-mmlab/mmdetection).
+This repo is an official implementation of ["Dense RepPoints: Representing Visual Objects with Dense Point Sets"](https://arxiv.org/abs/1912.11473) on COCO object detection/instance segmentation. The code is based on [mmdetection](https://github.com/open-mmlab/mmdetection).
 
 
 ## Introduction
@@ -67,7 +67,7 @@ The results on COCO 2017val are shown in the table below. **More code and models
 - `DCN` denotes replacing 3x3 conv with the 3x3 deformable convolution in `c3-c5` stages of backbone.
 - `none` in the `Anchor` column means 2-d `center point` (x,y) is used to represent the initial object hypothesis. 
 -  `MinMax` in the `convert func` column is the function to convert a point set to a pseudo box.
-- `ms` denotes multi-scale training or multi-scale test.
+- `ms-train` denotes multi-scale training.
 - `ATSS` denotes an assigner in [Arxiv](https://arxiv.org/abs/1912.02424).
 
 
