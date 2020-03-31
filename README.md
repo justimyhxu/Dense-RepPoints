@@ -56,9 +56,9 @@ The results on COCO 2017val are shown in the table below. **More code and models
 
 | Method          | Backbone | Anchor    |  convert func | Refine Assigner  | Lr schd | box AP   | mask AP    | Download |
 | :----:          | :------: | :-------: | :------:      | :-----:| :-----: | :----:  | :------: | :------:  |
-| Dense RepPoints | R-50-FPN | none      | MinMax        | MaxIou           |1x       | 38.9     | 32.7     | [model](https://drive.google.com/file/d/1gAgGTqsrufRleYflrClxI0AUuUC_x1MN/view?usp=sharing) |
-| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS             |1x       | 39.5     | 32.9     | [model](https://drive.google.com/file/d/1jhojzH0N9KI2SpLa-xNQZHZUCU9O5SAE/view?usp=sharing) |
-| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS            |3x (ms-train)       | 43.0     | 36.2     | [model](https://drive.google.com/file/d/1ZPd1iCZGEzqhVs4PwCXdThzqp0ufa_KX/view?usp=sharing) |
+| Dense RepPoints | R-50-FPN | none      | MinMax        | MaxIou           |1x       | 39.4     | 33.8     | [model](https://drive.google.com/file/d/1gAgGTqsrufRleYflrClxI0AUuUC_x1MN/view?usp=sharing) |
+| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS             |1x       | 39.9     | 33.9     | [model](https://drive.google.com/file/d/1jhojzH0N9KI2SpLa-xNQZHZUCU9O5SAE/view?usp=sharing) |
+| Dense RepPoints | R-50-FPN | none      | MinMax        | ATSS            |3x (ms-train)       | 43.4     | 37.1     | [model](https://drive.google.com/file/d/1ZPd1iCZGEzqhVs4PwCXdThzqp0ufa_KX/view?usp=sharing) |
 
 
 **Notes:**

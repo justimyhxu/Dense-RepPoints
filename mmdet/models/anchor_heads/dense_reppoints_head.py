@@ -962,6 +962,12 @@ class DenseRepPointsHead(nn.Module):
             bbox_pred = bbox_pred.permute(1, 2, 0).reshape(-1, 4)
             pts_pred = pts_pred.permute(1, 2, 0).reshape(-1, 2 * self.num_points)
             mask_pred = mask_pred.permute(1, 2, 0).reshape(-1, self.num_points)
+
+            # mask scoring
+            mask_sum = (mask_pred > 0.5).sum(1).float()
+            mask_score = ((mask_pred > 0.5).float() * mask_pred).sum(1) / (mask_sum + 1e-6)
+            scores = scores * mask_score.unsqueeze(1)
+
             nms_pre = cfg.get('nms_pre', -1)
             if nms_pre > 0 and scores.shape[0] > nms_pre:
                 if self.use_sigmoid_cls:
