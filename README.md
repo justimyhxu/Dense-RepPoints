@@ -13,6 +13,8 @@ This repo is an official implementation of ["Dense RepPoints: Representing Visua
   <p>Learning Dense RepPoints in Object Detection and Instance Segmentation.</p>
 </div>
 
+## Updates
+   - Our paper will appear at ECCV2020(06/07/2020)
 
 
 ## Usage
